@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+}
+.offStatus {
+  background-color: white;
+}
+.onStatus {
+  background-color: yellow;
+}
+.brokenStatus {
+  background-color: red;
+}
