@@ -1,4 +1,4 @@
-# TypeScript Base Project: lamp-demo-js
+# TypeScript Base Project: turn on/off the lamp light
 
 ## Installing
 
