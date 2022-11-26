@@ -14,9 +14,8 @@ npm run dev
 
 ## Application Screen
 
-![Alt text](https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen1.PNG "Lamp Demo"){ width: 200px; }
-![Alt text](https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen2.PNG "Lamp Demo"){ width: 200px; }
-
+![Alt text](https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen1.PNG "Lamp Demo" =250x)
+![Alt text](https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen2.PNG "Lamp Demo" =250x)
 ## Documentation
 
 *  [TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
