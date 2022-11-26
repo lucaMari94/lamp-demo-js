@@ -6,7 +6,7 @@
 npm i
 ```
 
-## webpack-dev-server ttp://localhost:9000/
+## webpack-dev-server (http://localhost:9000/)
 
 ```bash
 npm run dev 
