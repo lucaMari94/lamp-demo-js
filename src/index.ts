@@ -1,29 +1,16 @@
-import { BROKEN, OFF, ON } from "./classes/constant";
-import { Lamp, LampType } from "./classes/Lamp";
+import { BROKEN, OFF, ON } from "./utils/constants";
+import { Lamp, LampType } from "./utils/Lamp";
 import "./index.css";
 
 
-const home = () => {
+const main = () => {
 
-  const lamps: Array<LampType> = [
-    {id:0, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:1, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:2, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:3, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:4, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:5, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:6, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:7, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:8, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:9, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:10, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:11, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:12, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:13, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:14, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-    {id:15, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1},
-  ];
-  
+  const lamps: Array<LampType> = [];
+
+  for (let i = 0; i < 20; i++){
+    lamps.push( {id:0, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1});
+  }
+   
   const changeStatusClass = (status: number) => {
     let classes: string = "btn mx-2";
     switch(status){
@@ -71,4 +58,4 @@ const home = () => {
  
 };
 
-home();
+main();
