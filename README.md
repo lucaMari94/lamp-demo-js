@@ -13,7 +13,6 @@ npm run dev
 ```
 
 ## Topic
-***
 1.  Typescript: DOM manipulation (document.createElement)
 2. Typescript: Event Listener (method attaches an event handler to the specified HTML element)
 3. Typescript: Class declarations for creating objects (Lamp)
