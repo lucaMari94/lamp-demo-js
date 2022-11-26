@@ -13,8 +13,10 @@ npm run dev
 ```
 
 ## Image Application Screen
-<img src="https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen1.PNG" width="400">
-<img src="https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen2.PNG" width="400">
+<p float="left">
+    <img src="https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen1.PNG" width="400">
+    <img src="https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen2.PNG" width="400">
+</p>
 
 ## Documentation
 
