@@ -1,6 +1,9 @@
 import { BROKEN, OFF, ON } from "./utils/constants";
 import { Lamp, LampType } from "./utils/Lamp";
 import "./index.css";
+import lampImg from "./img/lamp.png";
+import lampYellowImg from "./img/yellow-lamp.png";
+import lampBrokenImg from "./img/red-lamp.png";
 
 const main = () => {
 
@@ -9,50 +12,49 @@ const main = () => {
   for (let i = 0; i < 20; i++){
     lamps.push( {id:0, status: OFF, maxPower: Math.floor(Math.random() * 10) + 1});
   }
-   
-  const changeStatusClass = (status: number) => {
-    let classes: string = "btn mx-2";
-    switch(status){
-      case 1:
-        classes += ' onStatus';
-        break;
-        
-      case -1:
-        classes += ' brokenStatus';
-        break;
-
-      default:
-        classes += ' offStatus';
-        break;
-    }
-    return classes;
+  
+  const iconAndInnerHtmlText = (lampButton: HTMLButtonElement, lampObj: Lamp, lampImg: any) => {
+    const lampImgage = document.createElement('img');
+    lampImgage.src = lampImg;
+    lampButton.innerHTML = "";
+    lampButton.append(lampImgage);
+    lampButton.append(document.createElement('br'));
+    lampButton.append(lampObj.getValuePower().toString() + "/" + lampObj.getMaxPower().toString());
+    const rechargeButton = document.createElement('button');
+    lampButton.append(document.createElement('br'));
+    rechargeButton.innerHTML = 'Recharge';
   }
 
   lamps.forEach( (lampData: LampType, index: number) => {
     const lamp = new Lamp(lampData.id, lampData.status, lampData.maxPower);
-    const lampDiv: HTMLButtonElement = document.createElement('button');
-    lampDiv.id = lampData.id.toString();
-    lampDiv.className = changeStatusClass(lamp.getStatus());
-    lampDiv.innerHTML = lamp.getValuePower().toString() + "/" + lamp.getMaxPower().toString();
-    
-    lampDiv.addEventListener('click', function handleClick(event: MouseEvent) {
+    const lampButton: HTMLButtonElement = document.createElement('button');
+    lampButton.id = lampData.id.toString();
+    iconAndInnerHtmlText(lampButton, lamp, lampImg);
+   
+    // listener
+    lampButton.addEventListener('click', function handleClick(event: MouseEvent) {
       event.preventDefault();
       if(lamp.getValuePower() >= lamp.getMaxPower()){
         lamp.setStatus(BROKEN);
+        iconAndInnerHtmlText(lampButton, lamp, lampBrokenImg);
       } else {
         lamp.incrementValuePower();
-        if(lamp.getStatus() === ON) lamp.setStatus(OFF);
-        else lamp.setStatus(ON);
+        if(lamp.getStatus() === ON){
+          lamp.setStatus(OFF);
+          iconAndInnerHtmlText(lampButton, lamp, lampImg);
+        }
+        else {
+          lamp.setStatus(ON);
+          iconAndInnerHtmlText(lampButton, lamp, lampYellowImg);
+        }
       }
-      lampDiv.innerHTML = lamp.getValuePower().toString() + "/" + lamp.getMaxPower().toString();
-      this.className = changeStatusClass(lamp.getStatus());
     });
 
     const lampContainer: HTMLElement = document.getElementById("lampContainer");
     if((index > 3 && ((index % 4) == 0))) {
       lampContainer.appendChild(document.createElement("hr"));
     }
-    lampContainer.appendChild(lampDiv);
+    lampContainer.appendChild(lampButton);
    
   });
 
