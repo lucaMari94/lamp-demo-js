@@ -12,6 +12,9 @@ body {
 .margin-top-100{
   margin-top: 100px;
 }
+.m-3{
+  margin: 3
+}
 .text-white{
   color: white;
 }
@@ -22,4 +25,13 @@ hr {
   color: black;
   border-color: black;
   background-color: black;
+}
+.italics{
+  font-style: italic;
+}
+.bg-white{
+  background-color: white;
+}
+.float-left{
+  float: left;
 }
