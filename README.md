@@ -12,11 +12,9 @@ npm i
 npm run dev 
 ```
 
-## Application Screen
-
-![Alt text](https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen1.PNG =40x40)
-![Alt text](https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen2.PNG =40x40)
-<img src="https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen1.PNG" width="200">
+## Image Application Screen
+<img src="https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen1.PNG" width="500">
+<img src="https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen2.PNG" width="500">
 
 ## Documentation
 
