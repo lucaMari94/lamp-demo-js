@@ -12,6 +12,23 @@ npm i
 npm run dev 
 ```
 
+## Documentation
+***
+Topic
+> Typescript: DOM manipulation (document.createElement)
+> Typescript: Event Listener (method attaches an event handler to the specified HTML element)
+> Typescript: Class declarations for creating objects (Lamp)
+```bash
+export class Lamp {
+    private id: number;
+    private status: number;
+    private valuePower: number;
+    private maxPower: number;
+    ... 
+```
+> Typescript: Function .forEach()
+> CSS styling
+
 ## Image Application Screen
 <p float="left">
     <img src="https://github.com/lucaMari94/lamp-demo-js/blob/master/src/img/screen1.PNG" width="402">
