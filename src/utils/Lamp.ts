@@ -1,5 +1,3 @@
-import { OFF } from "./constants";
-
 export interface LampType{
     id: number;
     status: number;
